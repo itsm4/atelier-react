@@ -1,5 +1,20 @@
-import './App.css'
-import Container from './components/QuizBox'
+import React from 'react';
+import MainScreen from './components/MainScreen';
+import Header from './components/Header';
+import './App.css';
+import Container from './components/QuizBox';
+
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <MainScreen />
+      <div className="container">
+        {/* Contenu supplémentaire */}
+      </div>
+    </div>
+  );
+};
 
 const questions = [
   {
@@ -105,10 +120,4 @@ const questions = [
 ];
 
 
-function App() {
-  return (
-   <Container />
-  )
-}
-
-export default App
+export default App;
