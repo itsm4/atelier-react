@@ -53,7 +53,7 @@ const questions = [
       correct: 1
   },
   {
-    quote: "Yippie-Ki-Yay, pauvre con !",
+    quote: "Yippee-Ki-Yay, pauvre con !",
     options: [
       "Predator",
       "Die Hard",
@@ -83,7 +83,7 @@ const questions = [
       correct: 1
   },
   {
-    quote: "C'est une excellente situation ça, scribe.",
+    quote: "C'est une bonne situation ça, scribe?",
     options: [
       "Astérix et Obélix : Mission Cléopâtre",
       "Les Visiteurs",
