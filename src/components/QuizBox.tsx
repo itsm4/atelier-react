@@ -1,5 +1,5 @@
 import Score from "./Score";
-import "../styles/Container.css"
+import "../styles/QuizBox.css"
 
 export default function Container() {
   return (
@@ -11,8 +11,10 @@ export default function Container() {
           <button type="button" className="answer a2">R2</button>
           <button type="button" className="answer a3">R3</button>
           <button type="button" className="answer a4">R4</button>
-        </div>
+      </div>
+      <div className="score-container">
         <Score />
+      </div>
       </section>
   )
 }
