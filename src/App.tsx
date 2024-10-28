@@ -1,4 +1,5 @@
 import './App.css'
+import Container from './components/Container'
 
 const questions = [
   {
@@ -105,10 +106,8 @@ const questions = [
 
 
 function App() {
- 
-
   return (
-   
+   <Container />
   )
 }
 

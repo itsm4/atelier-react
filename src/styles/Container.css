@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  padding: 2rem;
+}
+
+.reponses-container {
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.answer {
+  width: 50vw;
+  height: 10vw;
+}
+
+.answer:not(:last-child) {
+  margin-bottom: 1rem;
+}
