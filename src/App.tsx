@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import './App.css'
 import QuizBox from './components/QuizBox';
+import MainScreen from './components/MainScreen';
+import Header from './components/Header';
+import Container from './components/QuizBox';
 
 const questions = [
 	{
@@ -89,10 +92,15 @@ function App() {
   const [score, setScore] = useState<number>(0);
   return (
     <>
+      <div>
+        <Header />
+        <MainScreen />
+        <div className="container">
+          {/* Contenu supplémentaire */}
+        </div>
+      </div>
       {homeScreen && <HomeScreen />}
       {!homeScreen && <QuizBox questions={questions} indexQ={indexQ} setIndexQ={setIndexQ} score={score} setScore={setScore}/>}
     </>
   )
 }
-
-export default App
