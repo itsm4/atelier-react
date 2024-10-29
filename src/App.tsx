@@ -3,6 +3,7 @@ import './App.css'
 import QuizBox from './components/QuizBox';
 import MainScreen from './components/HomeScreen';
 import Header from './components/Header';
+import ResultScreen from './components/ResultScreen';
 
 const questions = [
 	{
@@ -94,7 +95,7 @@ export default function App() {
       <Header />
       {homeScreen && <MainScreen showHomeScreen={homeScreen} setShowHomeScreen={setHomeScreen} />}
       {!homeScreen && indexQ<questions.length-1 && <QuizBox questions={questions} indexQ={indexQ} setIndexQ={setIndexQ} score={score} setScore={setScore} />}
-      {indexQ === 9 && <MainScreen showHomeScreen={homeScreen} setShowHomeScreen={setHomeScreen}/>}
+      {indexQ === 9 && <ResultScreen score={score}/>}
     </>
   )
 }
