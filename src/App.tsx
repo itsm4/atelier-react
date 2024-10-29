@@ -98,7 +98,7 @@ export default function App() {
 					setShowHomeScreen={setHomeScreen}
 				/>
 			)}
-			{!homeScreen && indexQ < questions.length - 1 && (
+			{!homeScreen && indexQ < questions.length && (
 				<QuizBox
 					questions={questions}
 					indexQ={indexQ}
@@ -107,7 +107,7 @@ export default function App() {
 					setScore={setScore}
 				/>
 			)}
-			{indexQ === 9 && (
+			{indexQ === 10 && (
 				<ResultScreen
 					score={score}
 					setScore={setScore}

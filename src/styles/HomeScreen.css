@@ -24,3 +24,26 @@
    font-size: 4vw;
 
 }
+
+@media screen and (min-width: 700px) {
+
+   .home-card {
+      padding: 4rem 8rem;
+   }
+   .start-button {
+      width: 40%;
+      height: 6vw;
+      margin-top: 4rem;
+      background-color: #2C3E50;
+      font-size: 2vw;
+   }
+
+   .start-button:hover {
+      background-color: #3d566f;
+   }
+
+   .home-card p {
+      font-size: 2vw;
+
+   }
+}

@@ -23,3 +23,24 @@ h1 {
     width: 15%;
     height: auto;
 }
+
+@media screen and (min-width: 700px) {
+    .headerBox {
+        justify-content: space-evenly;
+    }
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .movieLogo {
+        width: 15%;
+        height: auto;
+    }
+
+    .filmLogo {
+        width: 12%;
+        height: auto;
+    }
+}
