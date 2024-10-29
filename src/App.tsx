@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import './App.css'
 import QuizBox from './components/QuizBox';
-import MainScreen from './components/MainScreen';
+import MainScreen from './components/HomeScreen';
 import Header from './components/Header';
-import Container from './components/QuizBox';
 
 const questions = [
 	{
@@ -86,21 +85,16 @@ const questions = [
 ];
 
 
-function App() {
+export default function App() {
   const [indexQ, setIndexQ] = useState<number>(0);
-  const [homeScreen, setHomeScreen] = useState<boolean>(false);
+  const [homeScreen, setHomeScreen] = useState<boolean>(true);
   const [score, setScore] = useState<number>(0);
   return (
     <>
-      <div>
-        <Header />
-        <MainScreen />
-        <div className="container">
-          {/* Contenu supplémentaire */}
-        </div>
-      </div>
-      {homeScreen && <HomeScreen />}
-      {!homeScreen && <QuizBox questions={questions} indexQ={indexQ} setIndexQ={setIndexQ} score={score} setScore={setScore}/>}
+      <Header />
+      {homeScreen && <MainScreen showHomeScreen={homeScreen} setShowHomeScreen={setHomeScreen} />}
+      {!homeScreen && indexQ<questions.length-1 && <QuizBox questions={questions} indexQ={indexQ} setIndexQ={setIndexQ} score={score} setScore={setScore} />}
+      {indexQ === 9 && <MainScreen showHomeScreen={homeScreen} setShowHomeScreen={setHomeScreen}/>}
     </>
   )
 }

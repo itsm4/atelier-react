@@ -3,18 +3,23 @@
     width: 100%;
     background-color: #2C3E50;
     color: white;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
+    padding-block: 1.5rem;
     
 }
 
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .movieLogo {
-    width: 20%;
-    height: 20%;
+    width: 18%;
+    height: auto;
 }
 
 .filmLogo {
-    width: 20%;
-    height: 20%;
+    width: 15%;
+    height: auto;
 }

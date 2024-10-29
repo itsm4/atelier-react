@@ -78,7 +78,8 @@ export default function Container({
 						type="button"
 						onClick={() => {
 							setIndexQ(indexQ + 1);
-							setShowNextButton(!showNextButton);
+              setShowNextButton(!showNextButton);
+              console.log(indexQ)
 						}}
 					>
 						Question Suivante

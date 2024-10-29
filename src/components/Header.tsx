@@ -2,7 +2,7 @@ import film_tw from "../assets/film_wt.png";
 import movie from "../assets/movie.png";
 import "../styles/Header.css";
 
-function Header() {
+export default function Header() {
 	return (
 		<div className="headerBox">
 			<img className="movieLogo" src={movie} alt="Movie Logo" />
@@ -11,5 +11,3 @@ function Header() {
 		</div>
 	);
 }
-
-export default Header;
