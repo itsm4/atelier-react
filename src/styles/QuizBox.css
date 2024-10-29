@@ -38,6 +38,7 @@
 
 .answer:hover {
   background-color: #3d566f;
+  cursor: pointer;
 }
 
 .answer:not(:last-child) {
@@ -78,6 +79,7 @@
   color: white;
   border: none;
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .next-button:hover {
@@ -86,4 +88,91 @@
 
 .border-black {
   border: 3px solid black;
+}
+
+@media screen and (min-width: 800px) {
+  .card {
+    padding: 3rem 10rem;
+  }
+
+  .current-question {
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+
+  .question {
+    font-size: 2em;
+  }
+
+  .reponses-container {
+    margin-block: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .answer {
+    margin-bottom: 1rem;
+    width: 45%;
+    height: 6vw;
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.3em;
+  }
+
+  .answer:hover {
+    background-color: #3d566f;
+  }
+
+  .answer:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .score-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrong-answer {
+    margin-bottom: 1rem;
+    width: 45%;
+    height: 6vw;
+    background-color: rgb(255, 70, 70);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.3em;
+  }
+
+  .good-answer {
+    margin-bottom: 1rem;
+    width: 45%;
+    height: 6vw;
+    background-color: rgb(38, 170, 38);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.3em;
+  }
+
+  .next-button {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 40%;
+    height: 6vw;
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.3em;
+  }
+
+  .next-button:hover {
+    background-color: #3d566f;
+  }
 }

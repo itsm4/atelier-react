@@ -29,16 +29,11 @@ h3 {
 	font-size: 5vw;
 }
 
-.restart-button:hover {
-	background-color: #3d566f;
-}
-
 .scoreresult {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 15px 15px;
-	border: 1px solid black;
+	padding: 2rem 1rem;
 	border-radius: 10px;
 	margin: 2rem;
 }
@@ -47,15 +42,14 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: 1px solid black;
 	border-radius: 10px;
 	padding: 1rem;
 	margin-block: 1rem;
 	width: 100%;
 }
 
-.scoreresult > button {
-	background-color: white;
+.restart-button {
+	background-color: 2C3E50;
 	padding: 15px 15px;
 	border-radius: 10px;
 	margin-bottom: 10px;
@@ -64,4 +58,28 @@ h3 {
 	width: 100%;
 	border: 1px solid black;
 	text-align: center;
+}
+
+.image-charlotte {
+	width: 20%;
+}
+
+.restart-button:hover {
+	background-color: #3d566f;
+}
+
+.oscar {
+	width: 10%;
+	height: auto;
+}
+
+@media screen and (min-width: 700px) {
+	.score{
+	font-size: 2vw;
+}
+
+.restart-button {
+	width: 50%;
+	font-size: 2em;
+}
 }
