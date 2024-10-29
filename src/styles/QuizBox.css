@@ -59,3 +59,7 @@
   border: none;
   border-radius: 1rem;
 }
+
+.border-black {
+  border: 3px solid black;
+}
