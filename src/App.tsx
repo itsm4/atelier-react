@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import './App.css'
-import QuizBox from './components/QuizBox';
-import MainScreen from './components/HomeScreen';
-import Header from './components/Header';
-import ResultScreen from './components/ResultScreen';
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import MainScreen from "./components/HomeScreen";
+import QuizBox from "./components/QuizBox";
+import ResultScreen from "./components/ResultScreen";
 
 const questions = [
 	{
@@ -85,17 +85,38 @@ const questions = [
 	},
 ];
 
-
 export default function App() {
-  const [indexQ, setIndexQ] = useState<number>(0);
-  const [homeScreen, setHomeScreen] = useState<boolean>(true);
-  const [score, setScore] = useState<number>(0);
-  return (
-    <>
-      <Header />
-      {homeScreen && <MainScreen showHomeScreen={homeScreen} setShowHomeScreen={setHomeScreen} />}
-      {!homeScreen && indexQ<questions.length-1 && <QuizBox questions={questions} indexQ={indexQ} setIndexQ={setIndexQ} score={score} setScore={setScore} />}
-      {indexQ === 9 && <ResultScreen score={score}/>}
-    </>
-  )
+	const [indexQ, setIndexQ] = useState<number>(0);
+	const [homeScreen, setHomeScreen] = useState<boolean>(true);
+	const [score, setScore] = useState<number>(0);
+	return (
+		<>
+			<Header />
+			{homeScreen && (
+				<MainScreen
+					showHomeScreen={homeScreen}
+					setShowHomeScreen={setHomeScreen}
+				/>
+			)}
+			{!homeScreen && indexQ < questions.length - 1 && (
+				<QuizBox
+					questions={questions}
+					indexQ={indexQ}
+					setIndexQ={setIndexQ}
+					score={score}
+					setScore={setScore}
+				/>
+			)}
+			{indexQ === 9 && (
+				<ResultScreen
+					score={score}
+					setScore={setScore}
+					indexQ={indexQ}
+					setIndexQ={setIndexQ}
+					showHomeScreen={homeScreen}
+					setShowHomeScreen={setHomeScreen}
+				/>
+			)}
+		</>
+	);
 }
