@@ -4,6 +4,35 @@
 	padding: 0;
 }
 
+h3 {
+	font-size: 3vw;
+	margin-bottom: 1rem;
+}
+
+.image-oss {
+	width: 60vw;
+}
+
+.restart-button {
+	font-size: 3vw;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 60%;
+  height: 10vw;
+  background-color: #2C3E50;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+}
+
+.score{
+	font-size: 5vw;
+}
+
+.restart-button:hover {
+	background-color: #3d566f;
+}
+
 .scoreresult {
 	display: flex;
 	flex-direction: column;

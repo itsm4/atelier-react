@@ -11,22 +11,22 @@ interface Question {
 interface questionAnswerProps {
 	questions: Array<Question>;
 	indexQ: number;
-  setIndexQ: (number: number) => void;
-  score: number;
-  setScore: (number: number) => void;
+	setIndexQ: (number: number) => void;
+	score: number;
+	setScore: (number: number) => void;
 }
 
 export default function Container({
 	questions,
 	indexQ,
-  setIndexQ,
-  score,
-  setScore
+	setIndexQ,
+	score,
+	setScore,
 }: questionAnswerProps) {
 	const [showNextButton, setShowNextButton] = useState(false);
 	return (
 		<section className="card">
-			<p className="current-question">{indexQ+1}/10</p>
+			<p className="current-question">Réplique {indexQ + 1}/10</p>
 			<h2 className="question">{questions[indexQ].quote}</h2>
 			<div className="reponses-container">
 				<button
@@ -34,9 +34,12 @@ export default function Container({
 					id="0"
 					className={`${showNextButton && questions[indexQ].correct === 0 ? "good-" : showNextButton ? "wrong-" : ""}answer`}
 					onClick={() => {
-            setShowNextButton(!showNextButton);
-            {questions[indexQ].correct === 0 ? setScore(score+1) : setScore(score)}
+						setShowNextButton(!showNextButton);
+						questions[indexQ].correct === 0
+							? setScore(score + 1)
+							: setScore(score);
 					}}
+					disabled={showNextButton}
 				>
 					{questions[indexQ].options[0]}
 				</button>
@@ -45,9 +48,12 @@ export default function Container({
 					id="1"
 					className={`${showNextButton && questions[indexQ].correct === 1 ? "good-" : showNextButton ? "wrong-" : ""}answer`}
 					onClick={() => {
-            setShowNextButton(!showNextButton);
-            {questions[indexQ].correct === 1 ? setScore(score+1) : setScore(score)}
+						setShowNextButton(!showNextButton);
+						questions[indexQ].correct === 1
+							? setScore(score + 1)
+							: setScore(score);
 					}}
+					disabled={showNextButton}
 				>
 					{questions[indexQ].options[1]}
 				</button>
@@ -56,9 +62,12 @@ export default function Container({
 					id="2"
 					className={`${showNextButton && questions[indexQ].correct === 2 ? "good-" : showNextButton ? "wrong-" : ""}answer`}
 					onClick={() => {
-            setShowNextButton(!showNextButton);
-            {questions[indexQ].correct === 2 ? setScore(score+1) : setScore(score)}
+						setShowNextButton(!showNextButton);
+						questions[indexQ].correct === 2
+							? setScore(score + 1)
+							: setScore(score);
 					}}
+					disabled={showNextButton}
 				>
 					{questions[indexQ].options[2]}
 				</button>
@@ -67,19 +76,23 @@ export default function Container({
 					id="3"
 					className={`${showNextButton && questions[indexQ].correct === 3 ? "good-" : showNextButton ? "wrong-" : ""}answer`}
 					onClick={() => {
-            setShowNextButton(!showNextButton);
-            {questions[indexQ].correct === 3 ? setScore(score+1) : setScore(score)}
+						setShowNextButton(!showNextButton);
+						questions[indexQ].correct === 3
+							? setScore(score + 1)
+							: setScore(score);
 					}}
+					disabled={showNextButton}
 				>
 					{questions[indexQ].options[3]}
 				</button>
 				{showNextButton && (
 					<button
+						className="next-button"
 						type="button"
 						onClick={() => {
 							setIndexQ(indexQ + 1);
-              setShowNextButton(!showNextButton);
-              console.log(indexQ)
+							setShowNextButton(!showNextButton);
+							console.log(indexQ);
 						}}
 					>
 						Question Suivante
@@ -87,7 +100,7 @@ export default function Container({
 				)}
 			</div>
 			<div className="score-container">
-				<Score score={score}/>
+				<Score score={score} />
 			</div>
 		</section>
 	);
